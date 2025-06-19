@@ -82,3 +82,11 @@ The app should now be running at ```http://localhost:5173```
 Notes
 	•	The app connects to the backend using the URL: ```http://localhost:8080```
 	•	Responsive design is handled via Tailwind.
+
+## TODO
+
+- Finalize API (create controllers for the rest of the business scenarios)
+- Improve error handling and global notifications in the UI
+- Add pagination and filters to orders list
+- Expand test coverage (frontend unit + integration, backend controller tests)
+- Add CI workflow (GitHub Actions) for testing and linting
