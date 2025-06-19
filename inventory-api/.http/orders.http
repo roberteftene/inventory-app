@@ -1,0 +1,34 @@
+@host = http://localhost:8080/api
+@adminUser = YWRtaW46YWRtaW5wYXNz
+@employeeUser = dXNlcjp1c2VycGFzcw==
+
+GET {{host}}/orders
+Content-Type: application/json
+Authorization: Basic {{adminUser}}
+
+###
+
+POST {{host}}/orders
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic {{employeeUser}}
+
+{
+  "billingAddress": {
+    "city": "Bucharest",
+    "street": "Nice street",
+    "zipCode": "013997"
+  },
+  "shippingAddress": {
+    "city": "Bucharest",
+    "street": "Nice street",
+    "zipCode": "013997"
+  },
+  "orderItems": [
+    {
+      "dcId": 1,
+      "productId": 1,
+      "quantityRequested": 1
+    }
+  ]
+}

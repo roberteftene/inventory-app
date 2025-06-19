@@ -1,0 +1,5 @@
+
+@host = http://localhost:8080/api
+
+GET {{host}}/inventory?dcId=1&sku=MILK-001
+Accept: application/json

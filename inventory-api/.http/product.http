@@ -1,0 +1,14 @@
+
+@host = http://localhost:8080/api
+
+POST {{host}}/products
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Water 1L",
+  "sku": "WATER-001",
+  "description": "WATER 1L",
+  "price": 10,
+  "category": "BEVERAGES"
+}

@@ -1,0 +1,19 @@
+# Root-level ignores
+node_modules/
+.env
+
+# Backend (Spring Boot)
+inventory-api/target/
+inventory-api/.idea/
+inventory-api/.classpath
+inventory-api/.project
+inventory-api/.settings/
+
+# Frontend (React)
+inventory-ui/node_modules/
+inventory-ui/dist/
+inventory-ui/.vite/
+
+# IDE
+*.iml
+.idea/
