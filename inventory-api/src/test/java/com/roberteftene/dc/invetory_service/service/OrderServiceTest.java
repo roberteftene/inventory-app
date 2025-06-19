@@ -76,7 +76,7 @@ class OrderServiceTest {
     void createOrder_shouldThrowWhenInsufficientStock() {
         var orderDto = buildValidCreateOrderDto();
 
-        when(inventoryRepo.getInventoryQuantityFor(1L, 1L)).thenReturn(1); // Less than requested
+        when(inventoryRepo.getInventoryQuantityFor(1L, 1L)).thenReturn(1);
 
         assertThrows(InsufficientStockException.class, () -> service.createOrder(orderDto));
     }
@@ -85,7 +85,7 @@ class OrderServiceTest {
         return new CreateOrderDto(
                 new Address("Street", "City", "Zip"),
                 new Address("Street", "City", "Zip"),
-                List.of(new CreateOrderItemDto(2, 1L, 1L)) // Quantity > available
+                List.of(new CreateOrderItemDto(2, 1L, 1L))
         );
     }
 
